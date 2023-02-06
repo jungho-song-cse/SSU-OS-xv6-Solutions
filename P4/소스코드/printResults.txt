@@ -1,0 +1,206 @@
+1번째 데이터-> 페이지 번호: 7, R: 0 W: 0
+2번째 데이터-> 페이지 번호: 0, R: 0 W: 0
+3번째 데이터-> 페이지 번호: 1, R: 0 W: 0
+4번째 데이터-> 페이지 번호: 2, R: 0 W: 0
+5번째 데이터-> 페이지 번호: 0, R: 0 W: 0
+6번째 데이터-> 페이지 번호: 3, R: 0 W: 0
+7번째 데이터-> 페이지 번호: 0, R: 0 W: 0
+8번째 데이터-> 페이지 번호: 4, R: 0 W: 0
+9번째 데이터-> 페이지 번호: 2, R: 0 W: 0
+10번째 데이터-> 페이지 번호: 3, R: 0 W: 0
+11번째 데이터-> 페이지 번호: 0, R: 0 W: 0
+12번째 데이터-> 페이지 번호: 3, R: 0 W: 0
+13번째 데이터-> 페이지 번호: 0, R: 0 W: 0
+14번째 데이터-> 페이지 번호: 3, R: 0 W: 0
+15번째 데이터-> 페이지 번호: 2, R: 0 W: 0
+16번째 데이터-> 페이지 번호: 1, R: 0 W: 0
+17번째 데이터-> 페이지 번호: 2, R: 0 W: 0
+18번째 데이터-> 페이지 번호: 0, R: 0 W: 0
+19번째 데이터-> 페이지 번호: 1, R: 0 W: 0
+20번째 데이터-> 페이지 번호: 7, R: 0 W: 0
+21번째 데이터-> 페이지 번호: 0, R: 0 W: 0
+22번째 데이터-> 페이지 번호: 1, R: 0 W: 0
+
+----------------------------------------------
+**optimal Stack Algorithm으로 Page Replacement 실행**
+
+1번째 page/frame에 string 7 교체 시 pagefault 발생!
+1번째 page/frame 현황: 7 
+
+2번째 page/frame에 string 0 교체 시 pagefault 발생!
+2번째 page/frame 현황: 7 0 
+
+3번째 page/frame에 string 1 교체 시 pagefault 발생!
+3번째 page/frame 현황: 7 0 1 
+
+4번째 page/frame에 string 2 교체 시 pagefault 발생!
+4번째 page/frame 현황: 7 0 1 2 
+
+5번째 page/frame 현황: 7 0 1 2 
+
+6번째 page/frame에 string 3 교체 시 pagefault 발생!(7 page 쫓겨남)
+6번째 page/frame 현황: 3 0 1 2 
+
+7번째 page/frame 현황: 3 0 1 2 
+
+8번째 page/frame에 string 4 교체 시 pagefault 발생!(1 page 쫓겨남)
+8번째 page/frame 현황: 3 0 4 2 
+
+9번째 page/frame 현황: 3 0 4 2 
+
+10번째 page/frame 현황: 3 0 4 2 
+
+11번째 page/frame 현황: 3 0 4 2 
+
+12번째 page/frame 현황: 3 0 4 2 
+
+13번째 page/frame 현황: 3 0 4 2 
+
+14번째 page/frame 현황: 3 0 4 2 
+
+15번째 page/frame 현황: 3 0 4 2 
+
+16번째 page/frame에 string 1 교체 시 pagefault 발생!(3 page 쫓겨남)
+16번째 page/frame 현황: 1 0 4 2 
+
+17번째 page/frame 현황: 1 0 4 2 
+
+18번째 page/frame 현황: 1 0 4 2 
+
+19번째 page/frame 현황: 1 0 4 2 
+
+20번째 page/frame에 string 7 교체 시 pagefault 발생!(4 page 쫓겨남)
+20번째 page/frame 현황: 1 0 7 2 
+
+21번째 page/frame 현황: 1 0 7 2 
+
+22번째 page/frame 현황: 1 0 7 2 
+
+
+page fault 횟수 : 8
+**optimal Stack Algorithm Page Replacement 종료**
+----------------------------------------------
+
+
+----------------------------------------------
+**lru Queue Algorithm으로 Page Replacement 실행**
+
+1번째 page/frame에 string 7 교체 시 pagefault 발생!
+1번째 page/frame 현황: 7 
+
+2번째 page/frame에 string 0 교체 시 pagefault 발생!
+2번째 page/frame 현황: 7 0 
+
+3번째 page/frame에 string 1 교체 시 pagefault 발생!
+3번째 page/frame 현황: 7 0 1 
+
+4번째 page/frame에 string 2 교체 시 pagefault 발생!
+4번째 page/frame 현황: 7 0 1 2 
+
+5번째 page/frame 현황: 7 0 1 2 
+
+6번째 page/frame에 string 3 교체 시 pagefault 발생!(7 page 쫓겨남)
+6번째 page/frame 현황: 3 0 1 2 
+
+7번째 page/frame 현황: 3 0 1 2 
+
+8번째 page/frame에 string 4 교체 시 pagefault 발생!(1 page 쫓겨남)
+8번째 page/frame 현황: 3 0 4 2 
+
+9번째 page/frame 현황: 3 0 4 2 
+
+10번째 page/frame 현황: 3 0 4 2 
+
+11번째 page/frame 현황: 3 0 4 2 
+
+12번째 page/frame 현황: 3 0 4 2 
+
+13번째 page/frame 현황: 3 0 4 2 
+
+14번째 page/frame 현황: 3 0 4 2 
+
+15번째 page/frame 현황: 3 0 4 2 
+
+16번째 page/frame에 string 1 교체 시 pagefault 발생!(4 page 쫓겨남)
+16번째 page/frame 현황: 3 0 1 2 
+
+17번째 page/frame 현황: 3 0 1 2 
+
+18번째 page/frame 현황: 3 0 1 2 
+
+19번째 page/frame 현황: 3 0 1 2 
+
+20번째 page/frame에 string 7 교체 시 pagefault 발생!(3 page 쫓겨남)
+20번째 page/frame 현황: 7 0 1 2 
+
+21번째 page/frame 현황: 7 0 1 2 
+
+22번째 page/frame 현황: 7 0 1 2 
+
+
+page fault 횟수 : 8
+**lru Queue Algorithm Page Replacement 종료**
+----------------------------------------------
+
+
+----------------------------------------------
+**lfu Queue Algorithm으로 Page Replacement 실행**
+
+1번째 page/frame에 string 7 교체 시 pagefault 발생!
+1번째 page/frame 현황: 7 
+
+2번째 page/frame에 string 0 교체 시 pagefault 발생!
+2번째 page/frame 현황: 7 0 
+
+3번째 page/frame에 string 1 교체 시 pagefault 발생!
+3번째 page/frame 현황: 7 0 1 
+
+4번째 page/frame에 string 2 교체 시 pagefault 발생!
+4번째 page/frame 현황: 7 0 1 2 
+
+5번째 page/frame 현황: 7 0 1 2 
+
+6번째 page/frame에 string 3 교체 시 pagefault 발생!(7 page 쫓겨남)
+6번째 page/frame 현황: 3 0 1 2 
+
+7번째 page/frame 현황: 3 0 1 2 
+
+8번째 page/frame에 string 4 교체 시 pagefault 발생!(3 page 쫓겨남)
+8번째 page/frame 현황: 4 0 1 2 
+
+9번째 page/frame 현황: 4 0 1 2 
+
+10번째 page/frame에 string 3 교체 시 pagefault 발생!(4 page 쫓겨남)
+10번째 page/frame 현황: 3 0 1 2 
+
+11번째 page/frame 현황: 3 0 1 2 
+
+12번째 page/frame 현황: 3 0 1 2 
+
+13번째 page/frame 현황: 3 0 1 2 
+
+14번째 page/frame 현황: 3 0 1 2 
+
+15번째 page/frame 현황: 3 0 1 2 
+
+16번째 page/frame 현황: 3 0 1 2 
+
+17번째 page/frame 현황: 3 0 1 2 
+
+18번째 page/frame 현황: 3 0 1 2 
+
+19번째 page/frame 현황: 3 0 1 2 
+
+20번째 page/frame에 string 7 교체 시 pagefault 발생!(1 page 쫓겨남)
+20번째 page/frame 현황: 3 0 7 2 
+
+21번째 page/frame 현황: 3 0 7 2 
+
+22번째 page/frame에 string 1 교체 시 pagefault 발생!(7 page 쫓겨남)
+22번째 page/frame 현황: 3 0 1 2 
+
+
+page fault 횟수 : 9
+**lfu Queue Algorithm Page Replacement 종료**
+----------------------------------------------
+
